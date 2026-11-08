@@ -3,14 +3,14 @@
 # verifies its SHA-256, and installs the binary to $HOME/.local/bin.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/multigen-ai/hyperai-releases/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/hyperai-dev/hyperai-releases/main/install.sh | sh
 #
 # Overrides (environment variables):
 #   PREFIX   install prefix (default: $HOME/.local; binary goes in $PREFIX/bin)
 #   VERSION  specific release tag, e.g. v0.2.0 (default: latest)
 set -eu
 
-REPO="multigen-ai/hyperai-releases"
+REPO="hyperai-dev/hyperai-releases"
 PREFIX="${PREFIX:-$HOME/.local}"
 BIN_DIR="$PREFIX/bin"
 VERSION="${VERSION:-latest}"

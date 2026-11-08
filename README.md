@@ -2,37 +2,19 @@
 
 Public release artifacts for the [`hyperai`](https://hyperfx.ai) CLI.
 
-The CLI source lives in a private monorepo (`multigen-ai/hyperai-clients`).
+The CLI source lives in a private monorepo (`hyperai-dev/hyperai-clients`).
 Tagged binary releases are pushed here so anyone can `curl` them without
 needing access to the source.
 
 ## Install
 
-Pick your platform and download from the latest release:
+Run the installer. It picks the archive for your OS and CPU, checks its SHA-256 and installs `hyperai` to `$HOME/.local/bin`:
 
 ```bash
-# macOS arm64
-curl -fsSL -o /usr/local/bin/hyperai \
-  https://github.com/multigen-ai/hyperai-releases/releases/latest/download/hyperai-darwin-arm64
-chmod +x /usr/local/bin/hyperai
-
-# macOS x64
-curl -fsSL -o /usr/local/bin/hyperai \
-  https://github.com/multigen-ai/hyperai-releases/releases/latest/download/hyperai-darwin-x64
-chmod +x /usr/local/bin/hyperai
-
-# Linux x64
-curl -fsSL -o /usr/local/bin/hyperai \
-  https://github.com/multigen-ai/hyperai-releases/releases/latest/download/hyperai-linux-x64
-chmod +x /usr/local/bin/hyperai
-
-# Linux arm64
-curl -fsSL -o /usr/local/bin/hyperai \
-  https://github.com/multigen-ai/hyperai-releases/releases/latest/download/hyperai-linux-arm64
-chmod +x /usr/local/bin/hyperai
+curl -fsSL https://raw.githubusercontent.com/hyperai-dev/hyperai-releases/main/install.sh | sh
 ```
 
-Windows: download `hyperai-windows-x64.exe` from the latest release.
+Manual download: each release has `hyperai_<version>_<OS>_<arch>.tar.gz` for macOS and Linux (`macOS` or `linux`, `arm64` or `x86_64`), `hyperai_<version>_windows_x86_64.zip` for Windows, and `checksums.txt`. The latest release: https://github.com/hyperai-dev/hyperai-releases/releases/latest
 
 ## Verify
 
